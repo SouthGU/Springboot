@@ -1,4 +1,4 @@
-package springbootdemo03.demo03;
+package finall;
 
 
 import org.springframework.boot.SpringApplication;
@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class Demo03Application {
+public class ComprehensiveControllerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Demo03Application.class, args);
+        SpringApplication.run(ComprehensiveControllerApplication.class, args);
     }
 
 
