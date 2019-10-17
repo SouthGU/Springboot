@@ -19,10 +19,13 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer>{
 
     //综合训练-1
     @Query("select d.departName from Depart d inner join d.employees s where s.name=?1")
-    String findDepartNameByEmployeeName(String employeeName);
+    List<String> findDepartNameByEmployeeName(String employeeName);
 
     //综合训练-1
     @Modifying
     @Query("delete from Employee s where s.name=?1")
     int deleteEmployeeByEmployyName(String employeeName);
+
+    @Query("select count(s.name) from Employee s where s.name=?1")
+    int queryEmployeeByName(String employeeName);
 }

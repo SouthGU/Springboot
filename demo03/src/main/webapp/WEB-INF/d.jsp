@@ -12,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-部门名称:${sessionScope.depart}
+部门名称:${sessionScope.employeeName}:${sessionScope.depart}
 
 
 </body>

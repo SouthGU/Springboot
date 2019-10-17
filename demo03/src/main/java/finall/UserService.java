@@ -31,7 +31,7 @@ public class UserService {
         return results;
     }
 
-    public String getDepartNameByEmployeeName(String employeeName){
+    public List<String> getDepartNameByEmployeeName(String employeeName){
         return employeeRepository.findDepartNameByEmployeeName(employeeName);
     }
 
@@ -39,4 +39,9 @@ public class UserService {
     public int deleteEmployeeByName(String employeeName){
         return employeeRepository.deleteEmployeeByEmployyName(employeeName);
     }
+    @Transactional
+    public int queryEmployeeByName(String employeeName){
+        return employeeRepository.queryEmployeeByName(employeeName);
+    }
+
 }

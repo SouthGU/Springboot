@@ -26,17 +26,25 @@ public class ComprehensiveController {
 
     @RequestMapping(value = "/getDepatNameByEmployeeName")
     public String getDepartNameByEmployeeName(String employeeName,HttpSession session){
-        String em = userService.getDepartNameByEmployeeName(employeeName);
+        List<String> em = userService.getDepartNameByEmployeeName(employeeName);
         System.out.println(employeeName);
         System.out.println(em);
         session.setAttribute("depart",em);
+        session.setAttribute("employeeName",employeeName);
         return "d";
     }
 
     @RequestMapping(value = "/deleteEmployeeByEmployeeName")
-    public String deleteEmployeeByEmployeeName(String employeeName){
-        int val = userService.deleteEmployeeByName(employeeName);
-        System.out.println(val);
+    public String deleteEmployeeByEmployeeName(String employeeName,HttpSession session){
+        int va =userService.queryEmployeeByName(employeeName);
+        if(va>=1){
+            int val = userService.deleteEmployeeByName(employeeName);
+            System.out.println(val);
+            session.setAttribute("depart","删除成功");
+        }
+        else{
+            session.setAttribute("depart","对不起，没有此用户");
+        }
         return "delete";
     }
 }

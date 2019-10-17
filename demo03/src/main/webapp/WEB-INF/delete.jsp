@@ -12,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-删除成功！
+${sessionScope.depart}
 
 </body>
 </html>
