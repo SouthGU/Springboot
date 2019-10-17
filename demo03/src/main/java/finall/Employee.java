@@ -12,7 +12,7 @@ public class Employee {
     private String name;
     private int  age;
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Depart.class)
-    @JoinColumn(name = "departId",referencedColumnName = "departNo")
+    @JoinColumn(name = "depart_id",referencedColumnName = "departNo")
     private Depart depart;
 
     public Employee(){}
