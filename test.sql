@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2019-10-17 09:03:47
+Date: 2019-10-17 22:39:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,16 +40,16 @@ INSERT INTO `stu` VALUES ('11111', '1111', '333');
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_depart`;
 CREATE TABLE `tb_depart` (
-  `depart_no` int(10) NOT NULL,
-  `depart_name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`depart_no`)
+  `departNo` int(10) NOT NULL,
+  `departName` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`departNo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tb_depart
 -- ----------------------------
-INSERT INTO `tb_depart` VALUES ('1', 'soft');
-INSERT INTO `tb_depart` VALUES ('2', '软件2');
+INSERT INTO `tb_depart` VALUES ('1', '软件-1');
+INSERT INTO `tb_depart` VALUES ('2', '软件-2');
 INSERT INTO `tb_depart` VALUES ('3', '软件-3');
 
 -- ----------------------------
@@ -63,16 +63,15 @@ CREATE TABLE `tb_employee` (
   `depart_id` int(10) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `depart_id` (`depart_id`) USING BTREE,
-  CONSTRAINT `depar_id` FOREIGN KEY (`depart_id`) REFERENCES `tb_depart` (`depart_no`) ON UPDATE CASCADE
+  CONSTRAINT `depar_id` FOREIGN KEY (`depart_id`) REFERENCES `tb_depart` (`departNo`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tb_employee
 -- ----------------------------
-INSERT INTO `tb_employee` VALUES ('1', '5', 'Tom', '1');
-INSERT INTO `tb_employee` VALUES ('2', '21', 'Alex', '1');
+INSERT INTO `tb_employee` VALUES ('0', '20', 'Tom', '1');
+INSERT INTO `tb_employee` VALUES ('1', '15', 'tac', '1');
+INSERT INTO `tb_employee` VALUES ('2', '19', 'Alex', '1');
 INSERT INTO `tb_employee` VALUES ('3', '52', 'May', '2');
-INSERT INTO `tb_employee` VALUES ('4', '34', 'Terry', '3');
-INSERT INTO `tb_employee` VALUES ('5', '12', 'Tac', '2');
-INSERT INTO `tb_employee` VALUES ('6', '11', '杰克', '1');
-INSERT INTO `tb_employee` VALUES ('7', '25', 'sss', '1');
+INSERT INTO `tb_employee` VALUES ('4', '5', 'Terry', '3');
+INSERT INTO `tb_employee` VALUES ('8', '15', 'lisen', '2');
