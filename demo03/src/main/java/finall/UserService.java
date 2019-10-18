@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 @Service
 public class UserService {
 
@@ -18,6 +19,15 @@ public class UserService {
     private DepartRepository departRepository;
 
     //综合训练
+/**
+  * 描述一下方法的作用
+  * @Author: COM.SISE.XGL
+  * @Date: 2019/10/19
+  * @param dname 111
+ * @param age 222
+  * @return java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+  * @Description:
+**/
     public List<Map<String,Object>> getIdAndNameBydepartNameAndAge(String dname,int age){
         List<Employee> es = employeeRepository.findIdAndNameByDepartNameAndAge(dname,age);
         List<Map<String,Object>> results = new ArrayList<>();
@@ -30,10 +40,21 @@ public class UserService {
         }
         return results;
     }
-
+    
+/**
+  * 描述一下方法的作用
+  * @Author: COM.SISE.XGL
+  * @Date: 2019/10/19 
+  * @param employeeName ee
+  * @return java.util.List<java.lang.String>
+  * @Description:
+**/
     public List<String> getDepartNameByEmployeeName(String employeeName){
         return employeeRepository.findDepartNameByEmployeeName(employeeName);
     }
+
+
+
 
     @Transactional
     public int deleteEmployeeByName(String employeeName){

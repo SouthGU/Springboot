@@ -22,8 +22,18 @@ public class ComprehensiveController {
         System.out.println(em);
         session.setAttribute("employees",em);
         return "employee";
+
     }
 
+/**
+  * 描述一下方法的作用
+  * @Author: COM.SISE.XGL
+  * @Date: 2019/10/19 2:37
+  * @param employeeName 
+  * @param session 
+  * @return java.lang.String
+  * @Description:
+**/
     @RequestMapping(value = "/getDepatNameByEmployeeName")
     public String getDepartNameByEmployeeName(String employeeName,HttpSession session){
         List<String> em = userService.getDepartNameByEmployeeName(employeeName);
