@@ -1,4 +1,4 @@
-package finall;
+package demo06_Redis;
 
 
 import org.springframework.boot.SpringApplication;
@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class ComprehensiveControllerApplication {
+public class Redis_Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ComprehensiveControllerApplication.class, args);
+        SpringApplication.run(Redis_Application.class, args);
     }
 
 

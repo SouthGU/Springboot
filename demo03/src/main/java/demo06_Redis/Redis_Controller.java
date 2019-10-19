@@ -19,7 +19,7 @@ public class Redis_Controller {
     }
     @RequestMapping(value = "/insertUserByRedis")
     public String insertUserByRedis(String uid,String username,String password){
-            demo06_Redis.User user = new demo06_Redis.User(uid,username,password);
+            User user = new User(uid,username,password);
             userRedisDAO.insertUserByRedis(user);
             return "insert";
     }

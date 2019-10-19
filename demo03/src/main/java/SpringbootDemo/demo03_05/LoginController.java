@@ -1,4 +1,4 @@
-package springbootdemo03.demo03;
+package SpringbootDemo.demo03_05;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -8,14 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 public class LoginController {
     //第三周
     @Resource
-    private  UserService userService;
+    private UserService02 userService02;
     @RequestMapping(value = "/login")
     public String hello(){
         return "login";
@@ -25,14 +23,14 @@ public class LoginController {
     public String doSave(@ModelAttribute User user , HttpSession session){
         user.setUsername(user.getUsername().toUpperCase());
         session.setAttribute("user",user);
-        userService.save(user);
+        userService02.save(user);
         return "r";
     }
 
     @RequestMapping(value = "/find")
     public  String findById(@RequestParam(value = "uid",required = true) String uid,HttpSession session){
 
-        User user = userService.findById(uid);
+        User user = userService02.findById(uid);
         session.setAttribute("user",user);
         return "s";
     }
@@ -41,7 +39,7 @@ public class LoginController {
     @RequestMapping(value = "/sort")
     public String sortUser(HttpSession session){
         Sort sort = new Sort(Sort.Direction.DESC,"uid");
-        Iterable<User> UserDatas = userService.finaAllSort(sort);
+        Iterable<User> UserDatas = userService02.finaAllSort(sort);
         session.setAttribute("sort",UserDatas);
         return "soft";
     }

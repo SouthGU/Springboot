@@ -1,4 +1,4 @@
-package finall;
+package SpringbootDemo.ComprehensiveTraining;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

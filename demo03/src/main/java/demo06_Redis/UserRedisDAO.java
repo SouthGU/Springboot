@@ -1,6 +1,5 @@
 package demo06_Redis;
 
-import demo06_Redis.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -29,10 +28,10 @@ public class UserRedisDAO {
         return valOpsStr.get("hello");
     }
 
-    public void insertUserByRedis(demo06_Redis.User user){
+    public void insertUserByRedis(User user){
         valOps.set(user.getUid(),user);
     }
-    public demo06_Redis.User findUserByRedis(String uid){
+    public User findUserByRedis(String uid){
         return  (User)valOps.get(uid);
     }
 

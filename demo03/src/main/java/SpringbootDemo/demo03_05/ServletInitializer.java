@@ -1,5 +1,6 @@
-package springbootdemo03.demo03;
+package SpringbootDemo.demo03_05;
 
+import SpringbootDemo.Demo03Application;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 

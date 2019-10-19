@@ -1,4 +1,4 @@
-package springbootdemo03.demo03;
+package SpringbootDemo.demo03_05;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 import javax.transaction.Transactional;
 
 @Service
-public class UserService {
+public class UserService02 {
     //第三周的作业
     @Resource
     private  UserRepository userRepository;

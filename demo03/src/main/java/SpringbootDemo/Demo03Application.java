@@ -1,4 +1,4 @@
-package springbootdemo03.demo03;
+package SpringbootDemo;
 
 
 import org.springframework.boot.SpringApplication;
