@@ -82,14 +82,14 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
-        <!--Springboot热部署-->
-
+        <!--热部署配置-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
-            <scope>true</scope><!-- 需要设置为true-->
+            <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -99,27 +99,10 @@
             <artifactId>spring-beans</artifactId>
             <version>5.1.9.RELEASE</version>
         </dependency>
-        <!--热部署配置-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <scope>runtime</scope>
-        </dependency>
+
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <!--<executable>true</executable>-->
-                    <fork>true</fork> <!--没有该配置，devtools 不生效-->
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
 
 
 </project>
