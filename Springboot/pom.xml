@@ -82,10 +82,13 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
+        <!--Springboot热部署-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
+            <optional>true</optional>
+            <scope>true</scope><!-- 需要设置为true-->
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -110,8 +113,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--<executable>true</executable>-->
+                    <fork>true</fork> <!--没有该配置，devtools 不生效-->
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
 
 </project>
