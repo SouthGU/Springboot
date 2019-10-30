@@ -1,4 +1,4 @@
-package SpringbootDemo.Quick;
+package SpringbootDemo.demo06;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
