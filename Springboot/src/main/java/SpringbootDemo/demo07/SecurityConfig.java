@@ -26,7 +26,7 @@ import javax.annotation.Resource;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     //大课课件
-/*
+
     protected void configure(AuthenticationManagerBuilder auth) throws Exception{
         auth.inMemoryAuthentication().passwordEncoder(new MypasswordEncoder())
                 .withUser("zy")
@@ -38,7 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .password("123456")
                 .roles("ADMIN","DBM");
     }
-*/
+
     protected void configure(HttpSecurity http) throws Exception{
         http.authorizeRequests()  //配置安全策略
             .antMatchers("/springboot").permitAll() //定义/springboot请求不需要验证
@@ -71,12 +71,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      * @param auth
      * @throws Exception
      */
+    /*
     public void configure(AuthenticationManagerBuilder auth) throws Exception{
         auth.inMemoryAuthentication().withUser(valOpsStr.get("user1")).password(passwordEncoder().encode(valOpsStr.get("password1"))).roles("USER");
         auth.inMemoryAuthentication().withUser(valOpsStr.get("user2")).password(passwordEncoder().encode(valOpsStr.get("password2"))).roles("ADMIN","DBM");
         //user3=xgl password3=123456
         auth.inMemoryAuthentication().withUser(valOpsStr.get("user3")).password(passwordEncoder().encode(valOpsStr.get("password3"))).roles("ADMIN","DBM");
     }
-
+*/
 
 }
