@@ -5,6 +5,7 @@ import com.sise.springbootcoursedesign.dao.PostmanRepository;
 import com.sise.springbootcoursedesign.dao.UserRepository;
 import com.sise.springbootcoursedesign.domain.Post;
 import com.sise.springbootcoursedesign.domain.Postman;
+import com.sise.springbootcoursedesign.domain.PostmanDays;
 import com.sise.springbootcoursedesign.domain.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -59,6 +60,21 @@ public class test02 {
         //重新查询ID为1的快递员为谁
         Post post1 = postRepository.getOne(1);
         System.out.println(post1.getPostman().getPostmanName());
+    }
+
+    /**
+     * 快递员点击在岗，请假，加班按钮
+     */
+    @Test
+    @Transactional
+    public void PostmanDays(){
+        Postman postman = postmanRepository.getOne(1);
+        Set<PostmanDays> postmandays = postman.getPostmandays();
+        for (PostmanDays p:postmandays) {
+            System.out.println(p.getOvertimeDays());
+            System.out.println(p.getLeaveDays());
+            System.out.println(p.getWorkDays());
+        }
     }
 
 }

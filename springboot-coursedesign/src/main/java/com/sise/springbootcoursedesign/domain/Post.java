@@ -33,7 +33,6 @@ public class Post {
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date getDate;           //收件时间
 
-
     private String outGoodsStatus;  //派件状态：准备派件、正在派件、派件签收、没成功签收
     private int outGoodsNumber; //派件次数
     private String failOutGoodsReason;  //派件失败原因

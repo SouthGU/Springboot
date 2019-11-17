@@ -25,17 +25,14 @@ public class Postman {
     private int outGoodsTotal;  //派件量
     private int basicPay;       //每月基本工资
     private int salary;         //每月总工资
-    private int workDays;       //工作天数
-    private int leaveDays;      //请假天数
-    private int overtimeDays;   //加班天数
-
-    private Date date;          //时间：用于签到、请假、加班时记录
 
     private String area;        //快递员所属区域
 
     @OneToMany(targetEntity = Post.class,mappedBy = "postman")
     Set<Post> posts = new HashSet<>();
 
+    @OneToMany(targetEntity = PostmanDays.class,mappedBy = "postman2")
+    Set<PostmanDays> postmandays = new HashSet<>();
 
     public int getId() {
         return id;
@@ -93,38 +90,6 @@ public class Postman {
         this.salary = salary;
     }
 
-    public int getWorkDays() {
-        return workDays;
-    }
-
-    public void setWorkDays(int workDays) {
-        this.workDays = workDays;
-    }
-
-    public int getLeaveDays() {
-        return leaveDays;
-    }
-
-    public void setLeaveDays(int leaveDays) {
-        this.leaveDays = leaveDays;
-    }
-
-    public int getOvertimeDays() {
-        return overtimeDays;
-    }
-
-    public void setOvertimeDays(int overtimeDays) {
-        this.overtimeDays = overtimeDays;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public String getArea() {
         return area;
     }
@@ -139,5 +104,13 @@ public class Postman {
 
     public void setPosts(Set<Post> posts) {
         this.posts = posts;
+    }
+
+    public Set<PostmanDays> getPostmandays() {
+        return postmandays;
+    }
+
+    public void setPostmandays(Set<PostmanDays> postmandays) {
+        this.postmandays = postmandays;
     }
 }
