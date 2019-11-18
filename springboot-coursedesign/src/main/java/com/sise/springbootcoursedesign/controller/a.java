@@ -21,6 +21,23 @@ public class a {
         postman.setBasicPay(66);
         int a =33;
         session.setAttribute("test",postman);
-        return "d";
+        return "HistogramWork";
+    }
+
+    @RequestMapping("/test2")
+    public String test2(HttpSession session){
+        Postman postman = new Postman();
+        postman.setBasicPay(66);
+        int a =33;
+        session.setAttribute("test3",postman);
+        return "test2";
+    }
+
+    @RequestMapping("/test1")
+    public String test1(HttpSession session){
+        Postman postman = new Postman();
+        postman.setBasicPay(66);
+        int a =33;
+        return "test2";
     }
 }

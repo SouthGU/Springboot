@@ -1,6 +1,7 @@
 package com.sise.springbootcoursedesign;
 
 import com.sise.springbootcoursedesign.dao.PostRepository;
+import com.sise.springbootcoursedesign.dao.PostmanDaysRepository;
 import com.sise.springbootcoursedesign.dao.PostmanRepository;
 import com.sise.springbootcoursedesign.dao.UserRepository;
 import com.sise.springbootcoursedesign.domain.Post;
@@ -30,6 +31,8 @@ public class test02 {
     PostRepository postRepository;
     @Autowired
     PostmanRepository postmanRepository;
+    @Autowired
+    PostmanDaysRepository postmanDaysRepository;
 
 
     /**
@@ -68,6 +71,7 @@ public class test02 {
     @Test
     @Transactional
     public void PostmanDays(){
+
         Postman postman = postmanRepository.getOne(1);
         Set<PostmanDays> postmandays = postman.getPostmandays();
         for (PostmanDays p:postmandays) {
@@ -76,5 +80,8 @@ public class test02 {
             System.out.println(p.getWorkDays());
         }
     }
+
+
+
 
 }

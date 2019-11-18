@@ -18,6 +18,7 @@
 
     <title>客户列表-BootCRM</title>
     <!-- Bootstrap Core CSS -->
+    <script src="${pageContext.request.contextPath}/static/js/echarts.min.js"></script>
     <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
     <link href="${pageContext.request.contextPath}/static/css/metisMenu.min.css" rel="stylesheet">

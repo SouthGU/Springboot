@@ -7,10 +7,11 @@
     <title>ECharts</title>
     <!-- 引入 echarts.js -->
     <script src="${pageContext.request.contextPath}/static/js/echarts.js"></script>
+
 </head>
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-<div id="main" style="width: 600px;height:400px;"></div>
+<div id="main" style="width: 600px;height:350px;"></div>
 <script type="text/javascript">
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
@@ -25,13 +26,13 @@
             data:['销量']
         },
         xAxis: {
-            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            data: ["收派件计件数","最大工作量","最小工作量"]
         },
         yAxis: {},
         series: [{
             name: '销量',
             type: 'bar',
-            data: [${sessionScope.test.basicPay}, 22, 11, 44, 10, 20]
+            data: [${histogramWork_sum}, 22, 11]
         }]
     };
 

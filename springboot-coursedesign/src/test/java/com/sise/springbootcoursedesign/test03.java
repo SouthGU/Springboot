@@ -4,7 +4,6 @@ import com.sise.springbootcoursedesign.dao.PostRepository;
 import com.sise.springbootcoursedesign.dao.PostmanRepository;
 import com.sise.springbootcoursedesign.dao.UserRepository;
 import com.sise.springbootcoursedesign.domain.Post;
-import com.sise.springbootcoursedesign.domain.Postman;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -116,8 +114,8 @@ public class test03 {
         String outGoodsStatus = "派件签收";
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String startDate = "2019-11-16";
-        String finalDate = "2019-11-17";
+        String startDate = "2019-11-10";
+        String finalDate = "2019-11-10";
         Date date1 = formatter.parse(startDate);
         Date date2 = formatter.parse(finalDate);
 

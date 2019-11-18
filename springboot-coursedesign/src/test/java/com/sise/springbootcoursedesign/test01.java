@@ -1,8 +1,12 @@
 package com.sise.springbootcoursedesign;
 
 import com.sise.springbootcoursedesign.dao.PostRepository;
+import com.sise.springbootcoursedesign.dao.PostmanDaysRepository;
+import com.sise.springbootcoursedesign.dao.PostmanRepository;
 import com.sise.springbootcoursedesign.dao.UserRepository;
 import com.sise.springbootcoursedesign.domain.Post;
+import com.sise.springbootcoursedesign.domain.Postman;
+import com.sise.springbootcoursedesign.domain.PostmanDays;
 import com.sise.springbootcoursedesign.domain.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +35,10 @@ public class test01 {
     UserRepository userRepository;
     @Autowired
     PostRepository postRepository;
-
+    @Autowired
+    PostmanRepository postmanRepository;
+    @Autowired
+    PostmanDaysRepository postmanDaysRepository;
 
     /**
      * User对象获取数据，包括Post的数据
@@ -75,6 +82,15 @@ public class test01 {
         //将对象填充到post中，继而保存post
         post.setUser(user);
         postRepository.save(post);
+
+
+
+        //---------------------------
+        PostmanDays postmanDays = new PostmanDays();
+        Postman postman = postmanRepository.getOne(1);
+        postmanDays.setDate(new Date());
+        postmanDays.setPostman2(postman);
+        postmanDaysRepository.save(postmanDays);
 
     }
 }
