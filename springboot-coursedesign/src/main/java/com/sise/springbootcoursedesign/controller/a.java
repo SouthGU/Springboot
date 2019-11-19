@@ -24,20 +24,14 @@ public class a {
         return "HistogramWork";
     }
 
-    @RequestMapping("/test2")
+    @RequestMapping("/CircleWork")
     public String test2(HttpSession session){
-        Postman postman = new Postman();
-        postman.setBasicPay(66);
-        int a =33;
-        session.setAttribute("test3",postman);
-        return "test2";
+        ;
+        return "CircleWork";
     }
 
     @RequestMapping("/test1")
     public String test1(HttpSession session){
-        Postman postman = new Postman();
-        postman.setBasicPay(66);
-        int a =33;
         return "test2";
     }
 }

@@ -31,7 +31,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <jsp:include page="../header.jsp"/>
+    <jsp:include page="header.jsp"/>
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">

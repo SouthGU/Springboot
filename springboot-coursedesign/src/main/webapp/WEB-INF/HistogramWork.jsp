@@ -19,20 +19,20 @@
     // 指定图表的配置项和数据
     var option = {
         title: {
-            text: 'ECharts 入门示例'
+            text: '收派件工作量'
         },
         tooltip: {},
         legend: {
-            data:['销量']
+            data:['收派件工作量']
         },
         xAxis: {
             data: ["收派件计件数","最大工作量","最小工作量"]
         },
         yAxis: {},
         series: [{
-            name: '销量',
+            name: '工作量',
             type: 'bar',
-            data: [${histogramWork_sum}, 22, 11]
+            data: [${histogramWork_sum.get(0)}, ${histogramWork_sum.get(1)}, ${histogramWork_sum.get(2)}]
         }]
     };
 
