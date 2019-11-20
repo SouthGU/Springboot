@@ -4,16 +4,20 @@ import com.sise.springbootcoursedesign.dao.PostRepository;
 import com.sise.springbootcoursedesign.dao.PostmanDaysRepository;
 import com.sise.springbootcoursedesign.dao.PostmanRepository;
 import com.sise.springbootcoursedesign.dao.UserRepository;
+import com.sise.springbootcoursedesign.domain.Post;
 import com.sise.springbootcoursedesign.domain.Postman;
 import com.sise.springbootcoursedesign.domain.PostmanDays;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
+import java.awt.print.Pageable;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -152,5 +156,7 @@ public class test05 {
         System.out.println("快递员ID为"+id+"工作的天数："+countWorkDays);
 
     }
+
+
 
 }

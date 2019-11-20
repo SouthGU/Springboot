@@ -1,7 +1,12 @@
 package com.sise.springbootcoursedesign.controller;
 
+import com.sise.springbootcoursedesign.dao.PostRepository;
 import com.sise.springbootcoursedesign.domain.Post;
 import com.sise.springbootcoursedesign.domain.Postman;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,6 +20,9 @@ import java.util.List;
  */
 @Controller
 public class a {
+
+    @Autowired
+    PostRepository postRepository;
     @RequestMapping("/a")
     public String a(HttpSession session){
         Postman postman = new Postman();
@@ -26,12 +34,29 @@ public class a {
 
     @RequestMapping("/CircleWork")
     public String test2(HttpSession session){
-        ;
+
         return "CircleWork";
     }
 
-    @RequestMapping("/test1")
+    @RequestMapping("/QueryOutPost1")
     public String test1(HttpSession session){
-        return "test2";
+        Pageable pageRequest = PageRequest.of(1, 10);
+        Page<Post> page = postRepository.findAll(pageRequest);
+
+        System.out.println("总记录数："+page.getTotalElements());
+        System.out.println("当前第几页："+page.getNumber());
+        System.out.println("总页数："+page.getTotalPages());
+        System.out.println("当前页面的List："+page.getContent());
+        System.out.println("当前页面的记录数："+page.getNumberOfElements());
+
+            List<Post> content = page.getContent();
+
+        for (Post p : content){
+            p.getId();
+            p.getFailGetGoodsReason();
+
+        }
+        session.setAttribute("outpage",page);
+        return "QueryOutPost";
     }
 }

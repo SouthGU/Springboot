@@ -28,11 +28,11 @@
                     </i> 邮差工作量</a></li>
             <li><a href="WorkDaysFirst"><i>
                     </i> 邮差工作情况</a></li>
-            <li><a href="WorkDaysFirst"><i>
-                    </i> 快递派件情况</a></li>
-            <li><a href="WorkDaysFirst"><i>
+            <li><a href="/QueryGetPost?page=1&size=10"><i>
                     </i> 快递收件情况</a></li>
-            <li><a href="WorkDaysFirst"><i>
+            <li><a href="/QueryOutPost?page=1&size=10"><i>
+                    </i> 快递派件情况</a></li>
+            <li><a href="/PostCount"><i>
                     </i> 快递统计情况</a></li>
         </ul>
     </div>

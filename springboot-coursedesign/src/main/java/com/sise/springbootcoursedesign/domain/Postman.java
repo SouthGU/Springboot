@@ -26,6 +26,10 @@ public class Postman {
     private int basicPay;       //每月基本工资
     private int salary;         //每月总工资
 
+    private int standardWorkload; //自定义标准工作量
+
+
+
     private String area;        //快递员所属区域
 
     @OneToMany(targetEntity = Post.class,mappedBy = "postman")
@@ -112,5 +116,12 @@ public class Postman {
 
     public void setPostmandays(Set<PostmanDays> postmandays) {
         this.postmandays = postmandays;
+    }
+    public int getStandardWorkload() {
+        return standardWorkload;
+    }
+
+    public void setStandardWorkload(int standardWorkload) {
+        this.standardWorkload = standardWorkload;
     }
 }
