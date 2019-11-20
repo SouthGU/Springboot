@@ -1,6 +1,7 @@
 package com.sise.springbootcoursedesign.controller;
 
 import com.sise.springbootcoursedesign.domain.Post;
+import com.sise.springbootcoursedesign.server.QueryMap3Service;
 import com.sise.springbootcoursedesign.server.QueryPostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Auther: sise.xgl
@@ -22,6 +24,9 @@ public class QueryPost {
 
     @Autowired
     QueryPostService queryPostService;
+
+    @Autowired
+    QueryMap3Service queryMap3Service;
 
 
     //收件管理系统
@@ -50,10 +55,16 @@ public class QueryPost {
 
     //派件管理系统
     @RequestMapping("PostCount")
-    public String PostCount(Date startDate,Date finallyDate){
-
+    public String PostCount(String startdate,String finallydate,HttpServletRequest httpServletRequest) throws Exception {
+        List<Integer> list = queryMap3Service.CirclePost(startdate, finallydate);
+        httpServletRequest.setAttribute("post_list",list);
         return "PostCount";
     }
 
+    //派件管理系统
+    @RequestMapping("PostCount1")
+    public String PostCount1() {
+        return "PostCount";
+    }
 
 }

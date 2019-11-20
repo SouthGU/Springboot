@@ -63,7 +63,7 @@
         $("button").click(function(){
             // alert("ֵ查询的结果: " + $("input[name='finallydate']").val());
             location.href="/WorkDays?startdate="+$("input[name='startdate']").val()+
-                "&finallydate="+$("input[name='finallydate']").val()+"&postmanid="+$("#postmanid").val();;
+                "&finallydate="+$("input[name='finallydate']").val()+"&postmanid="+$("#postmanid").val();
         });
     });
 </script>

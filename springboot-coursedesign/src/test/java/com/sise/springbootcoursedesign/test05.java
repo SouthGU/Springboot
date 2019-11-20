@@ -159,4 +159,21 @@ public class test05 {
 
 
 
+    @Test
+    @Transactional
+    public void SUM_POST_WORK6() throws Exception {
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String startDate = "2019-11-16";
+        String finalDate = "2019-11-31";
+        Date startdate = formatter.parse(startDate);
+        Date finallydate = formatter.parse(finalDate);
+
+        int countGetPost = postRepository.countGetPost(startdate, finallydate);
+        System.out.println(countGetPost);
+
+    }
+
+
+
 }

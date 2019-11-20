@@ -36,13 +36,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <h4 class="page-header">
-                    统计：按月或天分别统计RSC系统邮件发件量、收件量及故障件数
+                   查询某个邮差某月的工作情况（在岗天数、请假天数、加班天数），要求以饼图的方式进行显示；
                 </h4>
             </div>
         </div>
         <div class="panel panel-default">
 <br>
-            <jsp:include page="Map2.jsp"/>
+            <jsp:include page="Map3.jsp"/>
         </div>
         <div class="row">
 
@@ -62,8 +62,8 @@
     $(document).ready(function(){
         $("button").click(function(){
             // alert("ֵ查询的结果: " + $("input[name='finallydate']").val());
-            location.href="/WorkDays?startdate="+$("input[name='startdate']").val()+
-                "&finallydate="+$("input[name='finallydate']").val()+"&postmanid="+$("#postmanid").val();;
+            location.href="/PostCount?startdate="+$("input[name='startdate']").val()+
+                "&finallydate="+$("input[name='finallydate']").val();
         });
     });
 </script>
