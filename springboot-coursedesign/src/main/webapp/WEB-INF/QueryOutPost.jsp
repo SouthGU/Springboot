@@ -84,14 +84,62 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item">
-                <a class="page-link" href="/QueryGetPost?page=${outpage.getNumber()-1>1?page-1:1}&size=10" aria-label="Previous">
+                <a class="page-link" href="/QueryGetPost?page=${outpage.getNumber()-1>1?outpage.getNumber()-1:1}&size=10" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             <li class="page-item"><a class="page-link" href="/QueryOutPost?page=1&size=10">首页</a></li>
-            <c:forEach begin="1" end="${outpage.getTotalPages()}" var="pageNum">
-                <li class="page-item"><a class="page-link" href="/QueryOutPost?page=${pageNum}&size=10">${pageNum}</a></li>
-            </c:forEach>
+
+
+
+            <!-- 1-10页码展示 -->
+            <!-- 如果总页数大于10页 -->
+            <c:if test="${outpage.getTotalPages()>10}">
+                <!-- 如果当前页面大于等于（1）&&小于等于（6） -->
+                <c:if test="${(outpage.getNumber()>=0)&&(outpage.getNumber()<=6 )}">
+                    <c:forEach begin="1" end="10" var="n">
+                        <li class="page-item"><a class="page-link" href="/QueryGetPost?page=${n}&size=10">${n}</a></li>
+                    </c:forEach>
+                </c:if>
+                <!-- 如果当前数大于等于（总页数-4）&&小于等于（总页数） -->
+                <c:if test="${(outpage.getNumber()>=(outpage.getTotalPages()-4))&&(outpage.getNumber()<=outpage.getTotalPages()) }">
+                    <c:forEach begin="${ outpage.getTotalPages()-9}" end="${outpage.getTotalPages() }" var="n">
+                        <li class="page-item"><a class="page-link" href="/QueryGetPost?page=${n}&size=10">${n}</a></li>
+                    </c:forEach>
+                </c:if>
+                <!-- 如果当前数大于（6）&&小于总页数-4） -->
+                <c:if test="${(outpage.getNumber()>6)&&(outpage.getNumber()<(outpage.getTotalPages()-4))}">
+                    <c:forEach begin="${ outpage.getNumber()-5}" end="${outpage.getNumber()+4 }" var="n">
+                        <li class="page-item"><a class="page-link" href="/QueryGetPost?page=${n}&size=10">${n}</a></li>
+                    </c:forEach>
+                </c:if>
+            </c:if>
+
+            <!-- 如果总页数小于10页 -->
+            <c:if test="${getpage.getTotalPages()<=10 }">
+                <c:forEach begin="1" end="${getpage.getTotalPages() }" var="n">
+                    <a href="/QueryGetPost?page=${n}&size=10">${n}</a>
+                </c:forEach>
+            </c:if>
+
+
+
+
+
+
+
+
+
+<%--            <c:forEach begin="1" end="${outpage.getTotalPages()}" var="pageNum">--%>
+<%--                <li class="page-item"><a class="page-link" href="/QueryOutPost?page=${pageNum}&size=10">${pageNum}</a></li>--%>
+<%--            </c:forEach>--%>
+<%--            --%>
+
+
+
+
+
+
             <li class="page-item"><a class="page-link" href="/QueryOutPost?page=${outpage.getTotalPages()}&size=10">末页</a></li>
             <li class="page-item">
                 <a class="page-link" href="/QueryGetPost?page=${outpage.getNumber()+2>outpage.getTotalPages()?outpage.getTotalPages():outpage.getNumber()+2}&size=10" aria-label="Next">

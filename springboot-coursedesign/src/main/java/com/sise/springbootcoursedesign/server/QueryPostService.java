@@ -50,7 +50,7 @@ public class QueryPostService {
             @Override
             public Predicate toPredicate(Root<Post> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
                 //查询条件
-                Predicate p1 = criteriaBuilder.equal(root.get("getGoodsStatus").as(String.class), "成功");
+                Predicate p1 = criteriaBuilder.equal(root.get("getGoodsStatus").as(String.class), "收件成功");
                 query.where(criteriaBuilder.and(p1));
                 return query.getRestriction();
             }

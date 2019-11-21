@@ -59,4 +59,11 @@ public class a {
         session.setAttribute("outpage",page);
         return "QueryOutPost";
     }
+
+
+    @RequestMapping("/adminlogin1")
+    public String adminlogin(){
+
+        return "AdminLogin";
+    }
 }

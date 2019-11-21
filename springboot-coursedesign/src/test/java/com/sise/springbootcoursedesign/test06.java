@@ -77,4 +77,22 @@ public class test06 {
 
     }
 
+
+    @Test
+    @Transactional
+    public void postman_add_post2() {
+
+        for (int i =1 ; i<40;i++){
+            Post one = postRepository.getOne(i);
+//            one.setOutGoodsStatus("派件签收");
+//            one.setGetGoodsStatus("收件成功");
+            one.setOutGoodsFault("是");
+//            one.setGetDate(new Date());
+            one.setOutDate(new Date());
+//            one.setOrderStatus("是");
+            postRepository.save(one);
+
+        }
+
+    }
 }

@@ -36,7 +36,7 @@ public interface PostRepository extends JpaRepository<Post,Integer>, JpaSpecific
     @Query("SELECT count(outGoodsStatus) FROM Post where getDate BETWEEN  ?1 and ?2 AND postman.id = ?3 and area=?4 and outGoodsStatus ='派件签收'")
     int countOutGoodsStatus(Date startdate, Date finallydate, int id, String area);
 
-    @Query("select COUNT(orderStatus) FROM Post where getGoodsStatus='成功' and getDate between ?1 and ?2")
+    @Query("select COUNT(orderStatus) FROM Post where getGoodsStatus='收件成功' and getDate between ?1 and ?2")
     int countGetPost(Date startdate2, Date finallydate2);
 
     @Query("select COUNT(outGoodsStatus) FROM Post where outGoodsStatus='派件签收' and outDate between ?1 and ?2 ")
