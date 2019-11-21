@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h4 class="page-header">
-                   查询某个邮差某月的工作情况（在岗天数、请假天数、加班天数），要求以饼图的方式进行显示；
+                    统计：按月或天分别统计RSC系统邮件发件量、收件量及故障件数
                 </h4>
             </div>
         </div>
@@ -59,13 +59,29 @@
 <script src="${pageContext.request.contextPath}/static/js/sb-admin-2.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("button").click(function(){
-            // alert("ֵ查询的结果: " + $("input[name='finallydate']").val());
-            location.href="/PostCount?startdate="+$("input[name='startdate']").val()+
+    // $(document).ready(function(){
+    //     $("button").click(function(){
+    //         // alert("ֵ查询的结果: " + $("input[name='finallydate']").val());
+    //         location.href="/PostCount?startdate="+$("input[name='startdate']").val()+
+    //             "&finallydate="+$("input[name='finallydate']").val();
+    //     });
+    // });
+
+
+    function checkform() {
+        if (document.getElementById('ipt1').value.length !== 0) {
+            if (document.getElementById('ipt2').value.length !== 0) {
+                location.href="/PostCount?startdate="+$("input[name='startdate']").val()+
                 "&finallydate="+$("input[name='finallydate']").val();
-        });
-    });
+            } else {
+                alert('结束时间的输入值为空，请重新输入！');
+                return false;
+            }
+        } else {
+            alert('开始时间的输入值为空，请重新输入！');
+            return false;
+        }
+    }
 </script>
 </body>
 

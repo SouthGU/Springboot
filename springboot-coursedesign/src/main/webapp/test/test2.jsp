@@ -59,7 +59,7 @@
 <button>获取外部内容</button>
 <div id="wrapper">
     <!-- Navigation -->
-    <jsp:include page="../header.jsp"/>
+    <jsp:include page="header.jsp"/>
     <!-- Navigation -->
 
     <div id="page-wrapper">

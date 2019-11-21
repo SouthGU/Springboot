@@ -1,6 +1,7 @@
 package com.sise.springbootcoursedesign.server;
 
 import com.sise.springbootcoursedesign.dao.PostmanDaysRepository;
+import com.sise.springbootcoursedesign.dao.PostmanRepository;
 import com.sise.springbootcoursedesign.domain.PostmanDays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,9 @@ public class QueryMap2Service {
 
     @Autowired
     PostmanDaysRepository postmanDaysRepository;
+
+    @Autowired
+    PostmanRepository postmanRepository;
 
     public List<Integer> CircleWork(String startdate,String finallydate,int postmanid) throws ParseException {
 
@@ -46,6 +50,11 @@ public class QueryMap2Service {
         list.add(countLeaveDays);
 
         return list;
+    }
+
+    public int WorkDaysQueryPostmanById(int id){
+        int countById = postmanRepository.countById(id);
+        return countById;
     }
 
 }

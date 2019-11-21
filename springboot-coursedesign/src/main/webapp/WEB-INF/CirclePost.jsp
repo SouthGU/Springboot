@@ -33,7 +33,7 @@
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['发件量','收件量','故障件数']
+            data: ['发件量 : ${post_list.get(0)} 件','收件量 : ${post_list.get(1)} 件','故障件数 : ${post_list.get(2)} 件']
         },
         series : [
             {
@@ -42,9 +42,9 @@
                 radius : '55%',
                 center: ['50%', '60%'],
                 data:[
-                    {value:${post_list.get(0)}, name:'发件量'},
-                    {value:${post_list.get(1)}, name:'收件量'},
-                    {value:${post_list.get(2)}, name:'故障件数'}
+                    {value:${post_list.get(0)}, name:'发件量 : ${post_list.get(0)} 件'},
+                    {value:${post_list.get(1)}, name:'收件量 : ${post_list.get(1)} 件'},
+                    {value:${post_list.get(2)}, name:'故障件数 : ${post_list.get(2)} 件'}
                 ],
                 itemStyle: {
                     emphasis: {

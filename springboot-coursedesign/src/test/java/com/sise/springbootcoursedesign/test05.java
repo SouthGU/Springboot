@@ -137,11 +137,11 @@ public class test05 {
     public void SUM_POST_WORK5() throws Exception {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String startDate = "2019-11-16";
+        String startDate = "2019-11-1";
         String finalDate = "2019-11-31";
         Date startdate = formatter.parse(startDate);
         Date finallydate = formatter.parse(finalDate);
-        int id = 3;
+        int id = 1;
 
         //请假的天数
         int countLeaveDays = postmanDaysRepository.countLeaveDays(id, startdate, finallydate);

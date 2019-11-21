@@ -4,6 +4,7 @@ import com.sise.springbootcoursedesign.domain.Post;
 import com.sise.springbootcoursedesign.domain.Postman;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
 
 /**
  * @Auther: sise.xgl
@@ -11,4 +12,8 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @Description:
  */
 public interface PostmanRepository extends JpaRepository<Postman,Integer>,JpaSpecificationExecutor<Postman> {
+
+    @Query("select count(id) from Postman where id = ?1")
+    int  countById(int id);
+
 }

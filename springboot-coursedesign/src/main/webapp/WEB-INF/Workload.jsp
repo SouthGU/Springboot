@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ page trimDirectiveWhitespaces="true"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+         pageEncoding="UTF-8" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -24,7 +24,7 @@
     <link href="${pageContext.request.contextPath}/static/css/sb-admin-2.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
-    <link href="${pageContext.request.contextPath}/static/css/boot-crm.css" rel="stylesheet"  type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/boot-crm.css" rel="stylesheet" type="text/css">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -36,11 +36,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h4 class="page-header">查询某月按区域地址所有邮差（邮递员）的工作量（收派件计件数），最大工作量和最小工作量，要求能够以直方图显示；</h4>
-<%--                <button>发送</button>--%>
+                <%--                <button>发送</button>--%>
             </div>
         </div>
         <div class="panel panel-default">
-<br>
+            <br>
             <jsp:include page="Map1.jsp"/>
         </div>
         <div class="row">
@@ -58,13 +58,22 @@
 <script src="${pageContext.request.contextPath}/static/js/sb-admin-2.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("button").click(function(){
-            // alert("ֵ查询的结果: " + $("input[name='finallydate']").val());
-            location.href="/HistogramWork?startdate="+$("input[name='startdate']").val()+
-                "&finallydate="+$("input[name='finallydate']").val()+"&area="+$("#area").val();;
-        });
-    });
+
+    function checkform() {
+        if (document.getElementById('ipt1').value.length !== 0) {
+            if (document.getElementById('ipt2').value.length !== 0) {
+                location.href = "/HistogramWork?startdate=" + $("input[name='startdate']").val() +
+                    "&finallydate=" + $("input[name='finallydate']").val() + "&area=" + $("#area").val();
+            } else {
+                alert('结束时间的输入值为空，请重新输入！');
+                return false;
+            }
+        } else {
+            alert('开始时间的输入值为空，请重新输入！');
+            return false;
+        }
+    }
+
 </script>
 </body>
 

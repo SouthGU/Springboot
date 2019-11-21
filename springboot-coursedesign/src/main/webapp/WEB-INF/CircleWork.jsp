@@ -33,7 +33,7 @@
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['工作天数','加班天数','请假天数']
+            data: ['工作天数 : ${Postman_list.get(0)} 天','加班天数 : ${Postman_list.get(1)} 天','请假天数 : ${Postman_list.get(2)} 天']
         },
         series : [
             {
@@ -42,9 +42,9 @@
                 radius : '55%',
                 center: ['50%', '60%'],
                 data:[
-                    {value:${Postman_list.get(0)}, name:'工作天数'},
-                    {value:${Postman_list.get(1)}, name:'加班天数'},
-                    {value:${Postman_list.get(2)}, name:'请假天数'}
+                    {value:${Postman_list.get(0)}, name:'工作天数 : ${Postman_list.get(0)} 天'},
+                    {value:${Postman_list.get(1)}, name:'加班天数 : ${Postman_list.get(1)} 天'},
+                    {value:${Postman_list.get(2)}, name:'请假天数 : ${Postman_list.get(2)} 天'}
                 ],
                 itemStyle: {
                     emphasis: {

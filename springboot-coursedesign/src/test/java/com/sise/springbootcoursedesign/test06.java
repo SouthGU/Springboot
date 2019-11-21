@@ -63,5 +63,18 @@ public class test06 {
     }
 
 
+    /**
+     * 求出快递中所有的区域并显示出来
+     */
+    @Test
+    @Transactional
+    public void postman_add_post1() {
+        List<String> integers = postRepository.areaArray();
+        System.out.println(integers);
+        for (int i=1;i<integers.size();i++){
+            System.out.println(integers.get(i));
+        }
+
+    }
 
 }

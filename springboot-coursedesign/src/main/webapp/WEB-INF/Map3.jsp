@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lueshen
-  Date: 2019/11/18
-  Time: 21:13
-  To change this template use File | Settings | File Templates.
---%>
+
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -23,15 +17,15 @@
             <div class="form-group">
                 <label for="dtp_input2" class="col-md-1 control-label">起始时间</label>
                 <div class="input-group date form_date col-md-3" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16"  name="startdate" type="text" value="" readonly>
+                    <input class="form-control" size="16" id="ipt1" name="startdate" type="text" value="${PostCountlist.get(0)}" readonly>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                 </div>
                 <input type="hidden" id="dtp_input22" value="" /><br/>
 
-                <label for="dtp_input2" class="col-md-1 control-label">起始时间</label>
+                <label for="dtp_input2" class="col-md-1 control-label">终止时间</label>
                 <div class="input-group date form_date col-md-3" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16"  name="finallydate"  type="text" value="" readonly>
+                    <input class="form-control" size="16"  id="ipt2" name="finallydate"  type="text" value="${PostCountlist.get(1)}" readonly>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                 </div>
@@ -39,7 +33,7 @@
             </div>
         </fieldset>
     </form>
-    <button type="submit" class="btn btn-primary">查询</button>
+    <button type="submit" class="btn btn-primary" onclick="checkform()">查询</button>
     <br>
     <br>
     <jsp:include page="CirclePost.jsp"/>

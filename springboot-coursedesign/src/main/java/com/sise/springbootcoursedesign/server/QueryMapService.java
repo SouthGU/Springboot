@@ -71,4 +71,10 @@ public class QueryMapService {
         result.add(min);
         return result;
     }
+
+
+    public List<String> areaArray(){
+        List<String> areaArray = postRepository.areaArray();
+        return areaArray;
+    }
 }
