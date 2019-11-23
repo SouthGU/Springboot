@@ -56,7 +56,6 @@ public class QueryMap {
     public String HistogramWork1(HttpServletRequest session) {
         List<String> areaArray = queryMapService.areaArray();
         session.setAttribute("areaArray", areaArray);
-        System.out.println("areaArray的长度" + areaArray.size());
         return "Workload";
     }
 

@@ -38,7 +38,7 @@
                 <h1 class="text-base text-primary text-uppercase mb-4">Bubbly Dashboard</h1>
                 <h2 class="mb-4">Welcome back!</h2>
                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                <form id="loginForm" action="/adminlogin" class="mt-4">
+                <form id="loginForm" onsubmit="return false" action="/##" class="mt-4" method="post">
                     <div class="form-group mb-4">
                         <input type="text" name="id" placeholder="UserId or Email address" class="form-control border-0 shadow form-control-lg">
                     </div>
@@ -51,7 +51,7 @@
                             <label for="customCheck1" class="custom-control-label">Remember Me</label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary shadow px-5">Log in</button>
+                    <button type="button" class="btn btn-primary shadow px-5" onclick="login()">Log in</button>
                 </form>
             </div>
         </div>
@@ -66,5 +66,31 @@
 <script src="${pageContext.request.contextPath}/static/adminlogin/Chart.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/adminlogin/js.cookie.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/adminlogin/front.js"></script>
+
+    <script type="text/javascript">
+        function login() {
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/adminlogin" ,//url
+                data: $('#loginForm').serialize(),
+                success: function (result) {
+                    // alert(result);
+                    if (result=="1"){
+                       location.href="/HistogramWorkFirst"
+                    } else {
+                        alert("您输入的管理员账号密码有误！")
+                    }
+
+                    ;
+                },
+                error : function() {
+                    alert("请输入账号密码！");
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>

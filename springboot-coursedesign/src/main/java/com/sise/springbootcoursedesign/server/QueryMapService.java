@@ -41,8 +41,7 @@ public class QueryMapService {
 
         //太平所有邮差的收派件最大最小量
         List<Postman> postmanList = postmanRepository.findAll();
-        //System.out.println("全部快递员集合："+postmanList);
-        //定义数组，存放每个快递员本月的总工作量
+        System.out.println("全部快递员集合："+postmanList);
         List<Integer> list=new ArrayList<Integer>();
         for (Postman p:postmanList){
             int id = p.getId();
