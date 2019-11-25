@@ -15,13 +15,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/adminlogin/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/xgl/adminlogin/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/adminlogin/orionicons.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/adminlogin/style.default.css" id="theme-stylesheet">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/adminlogin/custom.css">
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/adminlogin/favicon.png?3">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/xgl/adminlogin/orionicons.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/xgl/adminlogin/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/xgl/adminlogin/custom.css">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/xgl/adminlogin/favicon.png?3">
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
@@ -31,7 +31,7 @@
         <div class="row align-items-center py-5">
             <div class="col-5 col-lg-7 mx-auto mb-5 mb-lg-0">
                 <div class="pr-lg-5">
-                    <img src="${pageContext.request.contextPath}/static/adminlogin/illustration.svg" alt="" class="img-fluid">
+                    <img src="${pageContext.request.contextPath}/static/xgl/adminlogin/illustration.svg" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-5 px-lg-4">
@@ -59,13 +59,13 @@
     </div>
 </div>
 <!-- JavaScript files-->
-<script src="${pageContext.request.contextPath}/static/adminlogin/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/adminlogin/popper.min.js"> </script>
-<script src="${pageContext.request.contextPath}/static/adminlogin/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/adminlogin/jquery.cookie.js"> </script>
-<script src="${pageContext.request.contextPath}/static/adminlogin/Chart.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/adminlogin/js.cookie.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/adminlogin/front.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/adminlogin/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/adminlogin/popper.min.js"> </script>
+<script src="${pageContext.request.contextPath}/static/xgl/adminlogin/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/adminlogin/jquery.cookie.js"> </script>
+<script src="${pageContext.request.contextPath}/static/xgl/adminlogin/Chart.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/adminlogin/js.cookie.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/adminlogin/front.js"></script>
 
     <script type="text/javascript">
         function login() {

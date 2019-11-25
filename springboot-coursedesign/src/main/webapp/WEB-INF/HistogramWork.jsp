@@ -6,7 +6,7 @@
 <head>
     <title>ECharts</title>
     <!-- 引入 echarts.js -->
-    <script src="${pageContext.request.contextPath}/static/js/echarts.js"></script>
+    <script src="${pageContext.request.contextPath}/static/xgl/js/echarts.js"></script>
 
 </head>
 <body>

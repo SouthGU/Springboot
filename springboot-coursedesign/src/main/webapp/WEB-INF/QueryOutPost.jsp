@@ -18,18 +18,18 @@
 
     <title>客户列表-BootCRM</title>
     <!-- Bootstrap Core CSS -->
-    <script src="${pageContext.request.contextPath}/static/js/echarts.min.js"></script>
-    <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/static/xgl/js/echarts.min.js"></script>
+    <link href="${pageContext.request.contextPath}/static/xgl/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
-    <link href="${pageContext.request.contextPath}/static/css/metisMenu.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/metisMenu.min.css" rel="stylesheet">
     <!-- DataTables CSS -->
-    <link href="${pageContext.request.contextPath}/static/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/dataTables.bootstrap.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="${pageContext.request.contextPath}/static/css/sb-admin-2.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="${pageContext.request.contextPath}/static/css/font-awesome.min.css" rel="stylesheet"
+    <link href="${pageContext.request.contextPath}/static/xgl/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
-    <link href="${pageContext.request.contextPath}/static/css/boot-crm.css" rel="stylesheet"
+    <link href="${pageContext.request.contextPath}/static/xgl/css/boot-crm.css" rel="stylesheet"
           type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -162,12 +162,12 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/jquery.dataTables.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/dataTables.bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/sb-admin-2.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/metisMenu.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/jquery.dataTables.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/dataTables.bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/sb-admin-2.js"></script>
 
 <script type="text/javascript">
     function editCustomer(id) {

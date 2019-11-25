@@ -11,7 +11,7 @@
 <head>
     <title>ECharts</title>
     <!-- 引入 echarts.js -->
-    <script src="${pageContext.request.contextPath}/static/js/echarts.js"></script>
+    <script src="${pageContext.request.contextPath}/static/xgl/js/echarts.js"></script>
 </head>
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->

@@ -17,14 +17,14 @@
     <meta name="author" content="">
     <title>客户列表-BootCRM</title>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/echarts.min.js"></script>
-    <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/static/css/metisMenu.min.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/static/css/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/static/css/sb-admin-2.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/static/css/font-awesome.min.css" rel="stylesheet"
+    <script src="${pageContext.request.contextPath}/static/xgl/js/echarts.min.js"></script>
+    <link href="${pageContext.request.contextPath}/static/xgl/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/metisMenu.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/sb-admin-2.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
-    <link href="${pageContext.request.contextPath}/static/css/boot-crm.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/xgl/css/boot-crm.css" rel="stylesheet" type="text/css">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -51,12 +51,12 @@
     </div>
 </div>
 <!-- jQuery -->
-<script src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/jquery.dataTables.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/dataTables.bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/sb-admin-2.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/metisMenu.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/jquery.dataTables.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/dataTables.bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/xgl/js/sb-admin-2.js"></script>
 
 <script type="text/javascript">
 

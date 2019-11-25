@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="${pageContext.request.contextPath}/static/css1/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="${pageContext.request.contextPath}/static/css1/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="${pageContext.request.contextPath}/static/xgl/css1/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="${pageContext.request.contextPath}/static/xgl/css1/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
@@ -39,10 +39,10 @@
     <jsp:include page="CirclePost.jsp"/>
 </div>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js1/jquery-1.8.3.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js1/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js1/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script  src="${pageContext.request.contextPath}/static/js1/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/xgl/js1/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/xgl/js1/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/xgl/js1/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script  src="${pageContext.request.contextPath}/static/xgl/js1/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 <script type="text/javascript">
 
     $('.form_date').datetimepicker({
