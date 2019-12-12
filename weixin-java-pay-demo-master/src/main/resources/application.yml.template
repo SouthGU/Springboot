@@ -1,0 +1,14 @@
+logging:
+  level:
+    org.springframework.web: info
+    com.github.binarywang.demo.wx.pay: debug
+    com.github.binarywang.wxpay: debug
+
+wx:
+  pay:
+    appId: wx737dadfff5dc7f87 #微信公众号或者小程序等的appid
+    mchId: 1488999952 #微信支付商户号
+    mchKey: happy2o88happy2o88happy2o88happy #微信支付商户密钥
+    subAppId: 573bc357f04c0509afa18ae431168377 #服务商模式下的子商户公众账号ID
+    subMchId: #服务商模式下的子商户号
+    keyPath: http://chjc.vxg105.10000net.cn/javaDemo/return3.jsp # p12证书的位置，可以指定绝对路径，也可以指定类路径（以classpath:开头）
